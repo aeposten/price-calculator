@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css" />
-        <title>Modern Stitchwitchery Price Calculator</title>
-    </head>
-    <body>
-        <form>
-            <label for="hourly-rate">Rate Per Hour</label>
-            <input id="hourly-rate" type="number" placeholder="rate" />
-            <label for="hours">Hours Spent</label>
-            <input id="hours" type="number" placeholder="hours" />
-            <label for="materials">Cost of Materials</label>
-            <input id="materials" type="number" placeholder="Materal Cost" />
-            <label for="shipping">Shipping Cost</label>
-            <input id="shipping" type="number" placeholder="shipping" />
-            <input id="calculate-btn" type="submit" placeholder="Calculate" />
-        </form>
-        <section> 
-            <div >Price in USD</div>
-            <div id="usd">Price Appears Here</div>
-            <div>Price in Canadian Dollar</div>
-            <div id="cdn">Price Appears Here</div>
-            <div>Price in Euro</div>
-            <div id="euro">Price Appears Here</div>
-        </section>
-    </body>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Modern Stitchwitchery Price Calculator</title>
+  </head>
+  <body>
+    <form onSubmit="generatePrice(); return false;">
+      <label for="hourly-rate">Rate Per Hour</label>
+      <input id="hourly-rate" type="number" placeholder="rate" />
+      <label for="hours">Hours Spent</label>
+      <input id="hours" type="number" placeholder="hours" />
+      <label for="materials">Cost of Materials</label>
+      <input id="materials" type="number" placeholder="Materal Cost" />
+      <label for="shipping">Shipping Cost</label>
+      <input id="shipping" type="number" placeholder="shipping" />
+      <label for="markup">Markup</label>
+      <input id="markup" type="number" placeholder="Markup" />
+      <input id="calculate-btn" type="submit" value="Calculate" />
+    </form>
+    <section>
+      <div>Price in USD</div>
+      <div id="usd">Price Appears Here</div>
+      <div>Price in Canadian Dollar</div>
+      <div id="cdn">Price Appears Here</div>
+      <div>Price in Euro</div>
+      <div id="euro">Price Appears Here</div>
+    </section>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
 </html>
