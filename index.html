@@ -5,7 +5,7 @@
     <title>Modern Stitchwitchery Price Calculator</title>
   </head>
   <body>
-    <form onSubmit="generatePrice(); return false;">
+    <form id="currency-form" onSubmit="fetchCurrency('CAD', 'USD'); fetchCurrency('EUR', 'USD'); return false;">
       <label for="hourly-rate">Rate Per Hour</label>
       <input id="hourly-rate" type="number" placeholder="rate" />
       <label for="hours">Hours Spent</label>
@@ -23,14 +23,15 @@
         <option value="3.0">3.0</option> 
       </select>
       <input id="calculate-btn" type="submit" value="Calculate" />
+      <input id="reset-btn" type="reset" value="Reset" onClick="resetPage()"/>
     </form>
     <section>
       <div>Price in USD</div>
-      <div id="usd">Price Appears Here</div>
+      <div id="USD">Price Appears Here</div>
       <div>Price in Canadian Dollar</div>
-      <div id="cdn">Price Appears Here</div>
+      <div id="CAD">Price Appears Here</div>
       <div>Price in Euro</div>
-      <div id="euro">Price Appears Here</div>
+      <div id="EUR">Price Appears Here</div>
     </section>
     <script type="text/javascript" src="index.js"></script>
   </body>
