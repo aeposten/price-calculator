@@ -20,7 +20,7 @@ function generatePrice() {
     parseInt(materialsEl.value) +
     parseInt(shippingEl.value);
   finalPrice = baseTotal * parseInt(markupEl.value);
-  USDEl.textContent = finalPrice;
+  USDEl.textContent = finalPrice.toFixed(2);
   return finalPrice;
 }
 
@@ -28,7 +28,7 @@ function generateConvertedData(data, to) {
   const converted = data.result;
   const element = selectComponent(to);
 
-  element.textContent = converted;
+  element.textContent = converted.toFixed(2);
 }
 
 function fetchCurrency(to, from) {
