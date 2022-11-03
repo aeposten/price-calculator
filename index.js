@@ -24,6 +24,12 @@ function generatePrice() {
   return finalPrice;
 }
 
+function renderPriceText(text) {
+  selectComponent("USD").textContent = text;
+  selectComponent("CAD").textContent = text;
+  selectComponent("EUR").textContent = text;
+}
+
 function generateConvertedData(data, to) {
   const converted = data.result;
   const element = selectComponent(to);
@@ -32,7 +38,7 @@ function generateConvertedData(data, to) {
 }
 
 function fetchCurrency(to, from) {
-  isFetching();
+  renderPriceText("Price Loading");
   generatePrice();
   try {
     fetch(`${URL}${to}&from=${from}&amount=${finalPrice}`, {
@@ -47,15 +53,4 @@ function fetchCurrency(to, from) {
   } catch (error) {
     console.error(error);
   }
-}
-
-function isFetching() {
-  selectComponent("USD").textContent = "Price Loading";
-  selectComponent("CAD").textContent = "Price Loading";
-  selectComponent("EUR").textContent = "Price Loading";
-}
-function resetPage() {
-  selectComponent("USD").textContent = "Price Appears Here";
-  selectComponent("CAD").textContent = "Price Appears Here";
-  selectComponent("EUR").textContent = "Price Appears Here";
 }
