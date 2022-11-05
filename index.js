@@ -9,11 +9,15 @@ const markupEl = selectComponent("markup");
 const USDEl = selectComponent("USD");
 let finalPrice = "";
 
+
+//Dynamically selects component by id
 function selectComponent(elementId) {
   let component = document.getElementById(elementId);
   return component;
 }
 
+
+//Generates total price based on user input
 function generatePrice() {
   let baseTotal =
     parseInt(hourlyRateEl.value) * parseInt(hoursEl.value) +
@@ -24,13 +28,15 @@ function generatePrice() {
   return finalPrice;
 }
 
+//Resets text for total price
 function renderPriceText(text) {
-  selectComponent("USD").textContent = '$USD';
-  selectComponent("CAD").textContent = '$CAD';
-  selectComponent("EUR").textContent = '€EUR';
+  selectComponent("USD").textContent = text;
+  selectComponent("CAD").textContent = text;
+  selectComponent("EUR").textContent = text;
 }
 
-function generateConvertedData(data, to) {
+//Dynamically renders converted price data on page, for use ion
+function renderConvertedData(data, to) {
   const converted = data.result;
   const element = selectComponent(to);
 
@@ -48,7 +54,7 @@ function fetchCurrency(to, from) {
     })
       .then((response) => response.json())
       .then((data) => {
-        generateConvertedData(data, to);
+        renderConvertedData(data, to);
       });
   } catch (error) {
     console.error(error);

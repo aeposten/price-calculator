@@ -1,21 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+
+/* Variable for black used throughout page */
 :root {
   --mainblck: #212529;
 }
 
-body, main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+/* General formatting for main and body */
+body,
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-    background-color: var(--mainblck);;
+  margin: 0;
+  height: 100vh;
+  background-color: var(--mainblck);
 }
 
 main {
@@ -29,50 +33,78 @@ main {
   background-color: whitesmoke;
 }
 
-h1, h2, .btn, input, select {
+/* Grouping frequently used properties*/
+h1,
+h2,
+.btn,
+input,
+select {
   font-family: "Philosopher", sans-serif;
   margin: 5px;
 }
 
+/* Formatting for link */
+a {
+  text-decoration: none;
+  color: var(--mainblck);
+  cursor: pointer;
+}
 
+
+/* Formatting for form and associated elements */
 .currency-form {
   display: flex;
   flex-direction: column;
 }
 
-input, select {
-    padding: 4px;
-    height: 30px;
- }
+input,
+select {
+  padding: 4px;
+  height: 30px;
+}
 
- input, select, .btn {
-    width: 200px;
-    color: whitesmoke;
-    background-color: var(--mainblck);
-    border: none;
-    border-radius: 20px;
-    text-align: center;
- }
+input,
+select,
+.btn {
+  width: 200px;
+  color: whitesmoke;
+  background-color: var(--mainblck);
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
 
- label {
-    margin: 4px;
- }
- 
- .btn {
-    height: 40px;
-    font-size: larger;
-    font-weight: 700;
-    transition-duration: 300ms;
-    cursor: pointer;
- }
+label {
+  margin: 4px;
+}
 
- .btn:hover,
-.btn:focus {
+.btn {
+  height: 40px;
+  font-size: larger;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn,
+h1 {
+  transition-duration: 300ms;
+}
+
+.btn:hover,
+.btn:focus,
+h1:hover,
+h1:focus {
   transform: scale(1.1);
 }
 
- .price {
-    text-align: center;
-    font-weight: bold;
-    margin: 4px;
- }
+/* FOrmatting for price and associated elements */
+.price {
+  text-align: center;
+  font-weight: bold;
+  margin: 4px;
+}
+
+.price-2 {
+  text-align: center;
+  font-weight: 100;
+}
