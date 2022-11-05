@@ -25,9 +25,9 @@ function generatePrice() {
 }
 
 function renderPriceText(text) {
-  selectComponent("USD").textContent = text;
-  selectComponent("CAD").textContent = text;
-  selectComponent("EUR").textContent = text;
+  selectComponent("USD").textContent = '$USD';
+  selectComponent("CAD").textContent = '$CAD';
+  selectComponent("EUR").textContent = '€EUR';
 }
 
 function generateConvertedData(data, to) {

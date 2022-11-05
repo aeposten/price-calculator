@@ -29,11 +29,50 @@ main {
   background-color: whitesmoke;
 }
 
-h1 {
+h1, h2, .btn, input, select {
   font-family: "Philosopher", sans-serif;
+  margin: 5px;
 }
+
 
 .currency-form {
   display: flex;
   flex-direction: column;
 }
+
+input, select {
+    padding: 4px;
+    height: 30px;
+ }
+
+ input, select, .btn {
+    width: 200px;
+    color: whitesmoke;
+    background-color: var(--mainblck);
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+ }
+
+ label {
+    margin: 4px;
+ }
+ 
+ .btn {
+    height: 40px;
+    font-size: larger;
+    font-weight: 700;
+    transition-duration: 300ms;
+    cursor: pointer;
+ }
+
+ .btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+}
+
+ .price {
+    text-align: center;
+    font-weight: bold;
+    margin: 4px;
+ }

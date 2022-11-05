@@ -6,19 +6,20 @@
   </head>
   <body>
     <main>
-      <h1>Modern StitchWitchery Price Calculator</h1>
+      <h1>Modern StitchWitchery</h1>
+      <h2> Price Calculator</h2>
       <form
         class="currency-form"
         onSubmit="fetchCurrency('CAD', 'USD'); fetchCurrency('EUR', 'USD'); return false;"
       >
         <label for="hourly-rate">Rate Per Hour</label>
-        <input id="hourly-rate" type="number" placeholder="rate" />
+        <input id="hourly-rate" type="number" min="8" required/>
         <label for="hours">Hours Spent</label>
-        <input id="hours" type="number" placeholder="hours" />
+        <input id="hours" type="number" required/>
         <label for="materials">Cost of Materials</label>
-        <input id="materials" type="number" placeholder="Materal Cost" />
+        <input id="materials" type="number" required/>
         <label for="shipping">Shipping Cost</label>
-        <input id="shipping" type="number" placeholder="shipping" />
+        <input id="shipping" type="number" required/>
         <label for="markup">Markup</label>
         <select id="markup" type="select">
           <option value="1.0">Select Markup</option>
@@ -27,22 +28,22 @@
           <option value="2.5">2.5</option>
           <option value="3.0">3.0</option>
         </select>
-        <input id="calculate-btn" type="submit" value="Calculate" />
+        <input class="btn" type="submit" value="Calculate" />
         <input
-          id="reset-btn"
+          class="btn"
           type="reset"
           value="Reset"
-          onClick="renderPriceText('Price Appears Here')"
+          onClick="renderPriceText()"
         />
       </form>
 
       <section>
-        <div>Price in USD</div>
-        <div id="USD">Price Appears Here</div>
-        <div>Price in Canadian Dollar</div>
-        <div id="CAD">Price Appears Here</div>
-        <div>Price in Euro</div>
-        <div id="EUR">Price Appears Here</div>
+        <div class="price">Price in USD</div>
+        <div id="USD" class="price">$USD</div>
+        <div class="price">Price in Canadian Dollar</div>
+        <div id="CAD" class="price">$CAD</div>
+        <div class="price">Price in Euro</div>
+        <div id="EUR" class="price">€EUR</div>
       </section>
     </main>
     <script type="text/javascript" src="index.js"></script>
