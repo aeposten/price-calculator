@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --mainblck: #212529;
+}
+
+body, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: var(--mainblck);;
+}
+
+main {
+  margin: 0;
+  height: 80vh;
+  width: 80vw;
+  font-family: "Mulish", sans-serif;
+  color: var(--mainblck);
+  border: 6px dashed var(--mainblck);
+  border-radius: 50%;
+  background-color: whitesmoke;
+}
+
+h1 {
+  font-family: "Philosopher", sans-serif;
+}
+
+.currency-form {
+  display: flex;
+  flex-direction: column;
+}
