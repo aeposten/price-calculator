@@ -35,7 +35,7 @@ function renderPriceText(text) {
   selectComponent("EUR").textContent = text;
 }
 
-//Dynamically renders converted price data on page, for use ion
+//Dynamically renders converted price data on page, for use in fetchCurrency
 function renderConvertedData(data, to) {
   const converted = data.result;
   const element = selectComponent(to);
@@ -43,6 +43,8 @@ function renderConvertedData(data, to) {
   element.textContent = converted.toFixed(2);
 }
 
+
+//Fetches currency data from API for live updates of conversion rates
 function fetchCurrency(to, from) {
   renderPriceText("Price Loading");
   generatePrice();
