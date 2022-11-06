@@ -24,7 +24,7 @@ body {
 
 main {
   margin: 0;
-  height: 80vh;
+  height: 70vh;
   width: 60vw;
   font-family: "Mulish", sans-serif;
   color: var(--mainblck);
@@ -96,7 +96,7 @@ h1:focus {
   transform: scale(1.1);
 }
 
-/* FOrmatting for price and associated elements */
+/* Formatting for price and associated elements */
 .price {
   text-align: center;
   font-weight: bold;
