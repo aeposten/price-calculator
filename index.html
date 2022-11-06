@@ -6,35 +6,45 @@
   </head>
   <body>
     <main>
-      <h1><a href="http://www.ko-fi.com/ModernStitchwitchery" target="_blank">Modern StitchWitchery</a></h1>
-      <h2> Price Calculator</h2>
+      <h1>
+        <a href="http://www.ko-fi.com/ModernStitchwitchery" target="_blank"
+          >Modern StitchWitchery</a
+        >
+      </h1>
+      <h2>Price Calculator</h2>
       <form
         class="currency-form"
         onSubmit="fetchCurrency('CAD', 'USD'); fetchCurrency('EUR', 'USD'); return false;"
       >
-        <label for="hourly-rate">Rate Per Hour</label>
-        <input id="hourly-rate" type="number" min="8" required/>
-        <label for="hours">Hours Spent</label>
-        <input id="hours" type="number" required/>
-        <label for="materials">Cost of Materials</label>
-        <input id="materials" type="number" required/>
-        <label for="shipping">Shipping Cost</label>
-        <input id="shipping" type="number" required/>
-        <label for="markup">Markup</label>
-        <select id="markup" type="select">
-          <option value="1.0">Select Markup</option>
-          <option value="1.5">1.5</option>
-          <option value="2.0">2.0</option>
-          <option value="2.5">2.5</option>
-          <option value="3.0">3.0</option>
-        </select>
-        <input class="btn" type="submit" value="Calculate" />
-        <input
-          class="btn"
-          type="reset"
-          value="Reset"
-          onClick="renderPriceText('Price Appears Here')"
-        />
+        <div class="form-col">
+          <label for="hourly-rate">Rate Per Hour</label>
+          <input id="hourly-rate" type="number" min="8" required />
+          <label for="hours">Hours Spent</label>
+          <input id="hours" type="number" required />
+        </div>
+        <div class="form-col">
+          <label for="materials">Cost of Materials</label>
+          <input id="materials" type="number" required />
+          <label for="shipping">Shipping Cost</label>
+          <input id="shipping" type="number" required />
+        </div>
+        <div class="form-col">
+          <label for="markup">Markup</label>
+          <select id="markup" type="select">
+            <option value="1.0">Select Markup</option>
+            <option value="1.5">1.5</option>
+            <option value="2.0">2.0</option>
+            <option value="2.5">2.5</option>
+            <option value="3.0">3.0</option>
+          </select>
+          <input class="btn" type="submit" value="Calculate" />
+          <input
+            class="btn"
+            type="reset"
+            value="Reset"
+            onClick="renderPriceText('Price Appears Here')"
+          />
+        </div>
       </form>
 
       <section>
